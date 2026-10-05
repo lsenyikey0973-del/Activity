@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Cliffs of California</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="js/digclock.js">
+    <link rel="stylesheet" href="js/site_scripts.js">
+    <link rel="stylesheet" href="js/randomcodes.js">
+</head>
+<body id="contact" Onload="disableButton(true)">
+    <div id="container">
+        <header>
+            <!-- <img src="Images/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564"> -->
+            <div class="main_header">
+                <div class="logo">
+                    <img src="Images/logo.png" alt="Great Cliffs Logo" width="125">
+                </div>
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cliffs.html">Cliffs</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <section id="timeofday">
+        <span>Your Current Local Time:</span>
+        <span id="clock"></span>
+    </section>
+        <main>
+            <h1>Contacting Us</h1>
+            <p>If you need more information about the Cliffs, Hours of Operations, Facilities or questions
+            about this site, please contact us bu using one of the following:</p>
+            <h2>Phone:</h2>
+            <p>(800)GCLIFFS</p>
+            <h2>Email:</h2>
+            <p>info@greatcliffs.com</p>
+            <h2>Fill Out This Form:</h2>
+            <form action="/contact" method="post">
+                <fieldset>
+                    <legend>Contact Form</legend><br>
+                    <label for="">Enter your full name:</label><br>
+                    <input type="text" name="name" placeholder="John Doe"><br>
+                    <label for="">Enter your email:</label><br>
+                    <input type="email" name="email" placeholder="johndoe@gmail.com"><br>
+                    <label for="">Enter your phone:</label><br>
+                    <input type="text" name="phone" placeholder="xxx-xxx-xxxx"><br>
+                    <label for="">How should we contact you?</label><br>
+                    <input type="radio" name="contact" value="email"/>Email <br>
+                    <input type="radio" name="contact" value="phone"/>Phone <br>
+                       
+                    <div class="options">
+                            <label for="">Which Cliff are you inquiring?</label><br>
+                            <select name="#" id="select">
+                            <option value="#">West Cliff</option>
+                            <option value="#">North Cliff</option>
+                            <option value="#">East Cliff</option>
+                            <option value="#">South Cliff</option>
+                        </select><br>
+                    </div>
+                    
+                    <div class="commentbox">
+                        <label for="#">How did you hear about us:</label><br>
+                        <textarea name="" id="textarea"></textarea><br>
+                    </div>
+                    <!-- Random Codes -->
+                     <div class="randomcode">
+                        <input type="text" id="codeentered" name="randomcode" placeholder="Enter characters">
+                        <p id="codes"></p>
+                     </div>
+
+                    <div class="button">
+                            <input type="submit" id="submit" value="Inquire">
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </main>
+          <section>
+            <ul id="partners">
+                <!-- <li class="partner">
+                    <img src="Images/partners/partner-bustour.png" alt="Partner Bus Tours">
+                </li>
+                <li class="partner">
+                    <img src="Images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+                </li>
+                <li class="partner">
+                    <img src="Images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+                </li>
+                <li class="partner">
+                    <img src="Images/partners/partner-collegetours.png" alt="Partner College Tours">
+                </li>
+                <li class="partner">
+                    <img src="Images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+                </li>
+                <li class="partner">
+                    <img src="Images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+                </li> -->
+            </ul>
+        </section>
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">
+                    &copy; Copyright 2020 :: GreatCliffs.com
+                </div>
+                <div class="social">
+                    <a href="#" class="fa-brands fa-facebook"></a>
+                    <a href="#" class="fa-brands fa-instagram"></a>
+                    <a href="#" class="fa-brands fa-x-twitter"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents
+                are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+        <!--Digital Clock -->
+        <script src="js/digclock.js"></script>
+            <!-- Partners -->
+        <script>
+            var partnersList = [
+            {src: "images/partners/partner-bustour.png", alt: "Partner Bus Tours"},
+            {src: "images/partners/partner-cabinrental.png", alt: "Partner Cabin Rental"},
+            {src: "images/partners/partner-campingadv.png", alt: "Partner Camping Adventure"},
+            {src: "images/partners/partner-collegetours.png", alt: "Partner College Tours"},
+            {src: "images/partners/partner-rentalbike.png", alt: "Partner Bike Rentals"},
+            {src: "images/partners/partner-tourgroup.png", alt: "Partner Tour Group"}
+        ];
+
+        //Declare a new variable replace the HTML container
+        var partnersContainer = "";
+
+        //Loop through each of the items in the Partners HTML container and add it to partnersContainer.
+        for (var i = 0; i <partnersList.length; i++) {
+            partnersContainer += '<li class="partner">' + '<img src="' + partnersList[i].src + '" alt="' + partnersList[i].alt + '">' + '</li>';
+        }
+
+        //Display all six image codes stored in the array
+        document.getElementById("partners").innerHTML = partnersContainer;
+                    /* RANDOM CODES */
+        // NOTE: submit button is initially disabled upon loading of this page - see <body> in html
+        
+
+        var code = ''; //to store generated codes and initialize to empty value
+        var getCode = ''; // to store entered code
+        var btnvalue; //for button boolean value
+
+        //create variable to hold the type of characters we want to show as codes
+        var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
+
+        for (var i = 0; i < 6; i++) {
+            code +=str.charAt(Math.floor(Math.random() * str.length))
+        }
+
+        document.getElementById("codes").textContent = code;
+
+        //determine when to able or disable button
+        function disableButton(btnvalue) {
+            document.getElementById("submit").disabled = btnvalue; //able/disable button
+
+            if (btnvalue == true) { //test if button is disabled
+                //set button and label color translucent
+                document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+                document.getElementById("submit").style.color ="rgba(255, 255, 255, 0.5)"; 
+            } else {
+                //set button and label color with no transparency
+                document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 1)";
+                document.getElementById("submit").style.color = "rgba(255, 255, 255, 1)";
+            }
+        }
+        disableButton(true);
+
+        //listen to user input code
+        var codebox = document.getElementById("codeentered"); //get textbox
+        codebox.addEventListener("input", evaluateCode); //listen to code entered in textbox
+
+
+        //run function if detected user had entered a character
+        function evaluateCode() {
+            getCode = document.getElementById("codeentered").value; //get character entered
+            var charset1 = getCode.trim(); //remove any hidden characters entered 
+            var charset2 = code.trim(); //remove any hidden characters generated
+
+            //test if code entered matches the number of characters
+            if (charset1.length == charset2.length && charset1 == charset2) {
+                disableButton(false); //if match, run the function to enable the button
+            } else {
+                disableButton(true);
+            }
+        }
+        </script>
+        <script src="js/site_scripts.js"></script>
+</body>
+</html>

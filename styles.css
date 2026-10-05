@@ -1,0 +1,376 @@
+/*RESET STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    min-height: 400px;
+    padding-top: 3em;
+}
+
+#home header {
+    background: no-repeat lightgrey url(Images/cliff_ocean.jpg);
+    background-size: 1500px;
+}
+
+#contact header {
+    background: no-repeat lightgrey url(Images/cliff_ocean.jpg);
+    background-size: 1500px;
+}
+.main_header {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+
+.main_header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0 2em 0 0;
+    float: left;
+}
+
+#timeofday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 100%;
+    height: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font:  #3a3a3a, #125688;
+    background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    text-align: center;
+}
+#timeofday span {
+            padding: 2px;
+}
+
+/*NAVIGATION */
+.main_menu {
+    margin-left: 220px;
+    font-weight: 400;
+}
+
+.main_menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.main_menu ul li a {
+    text-decoration: none;
+    color: #888;
+}
+
+.main_menu ul li a:hover {
+    color: #9ed034;
+    text-decoration: underline;
+}
+
+.main_menu ul li .active {
+    background: #9ed034;
+    border: none;
+}
+
+.main_menu ul li.active a{
+    color: #fff;
+}
+
+
+/* MAIN */
+
+main {
+    padding: 3em 6em 3em 5.5em;
+    margin: 2em 0;
+    font-family: inherit;
+}
+
+main h1 {
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
+    color: #9ed034;
+}
+
+main h2 {
+    font-size: 1.7em;
+    padding: 0.8em 0;
+}
+
+/* PARTNERS */
+section {
+    width: 100%;
+    background-color: #4288C3;
+}
+
+section #partners {
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section #partners .partner {
+    display: inline-block;
+    margin: 0 0.75em;
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+section #partners .partner img {
+    width: 90px;
+    height: 90px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 155px;
+    padding-top: 1em;
+    background-color: #ecfab8;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer #nondisclaimer .copy {
+    padding: 3em 3.5em 1em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+
+footer #nondisclaimer .social {
+    padding: 1em 2.5em 1em 2.5em;
+    margin-right: 9.25em;
+    float: right;
+}
+
+footer #nondisclaimer {
+        clear: both;
+}
+
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+
+footer #nondisclaimer .social .fa-brands {
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+
+footer #nondisclaimer .social .fa:hover {
+    opacity: 0.7;
+}
+
+footer #nondisclaimer .social .fa-facebook {
+    background: #3B5998;
+    color: #fff;
+}
+
+footer #nondisclaimer .social .fa-instagram {
+    background: #125688;
+    color: #fff;
+}
+
+footer #nondisclaimer .social .fa-x-twitter {
+    background: #55ACEE;
+    color: #fff;
+}
+
+footer #disclaimer {
+    margin: 1.5em;
+}
+
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+
+
+/* MAIN FORM STYLES */
+main form .randomcode {
+    display: flex;
+    flex-direction: row;
+    max-width:30%;
+    margin: 1.5em 0;
+    padding: 0.8em 0;
+}
+main form .randomcode #codes {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(128, 128, 128, 0.6);
+    padding: 3px;
+    margin-left: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 15px 5px 5px 5px;
+}
+
+main form .randomcode input {
+    padding: 10px;
+    margin-top: 8px;
+}
+
+form .button input {
+    width: 8em;
+    height: 2.5em;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #4977D1; 
+    color: #fff;
+} 
+
+main form fieldset {
+    padding: 1.2em;
+}
+
+main form fieldset input {
+    margin: 0.8em 0;
+    padding: 0.2em;
+    max-width: 450px;
+}
+
+form .options {
+    display: flex;
+    flex-direction: row;
+    max-width: 34%;
+    margin: 1.2em 0;
+}
+
+form .options #select {
+    margin-left: auto;
+    width: 100px;
+}
+
+
+/* TABLE CSS STYLES */
+table {
+    width: 80%;
+    margin: 18px auto;
+    text-align: center;
+}
+
+caption {
+    background-color: rgb(139, 37, 25);
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 14px;
+}
+
+
+th, td {
+    border: 2px solid rgb(184, 123, 103);
+    padding: 16px 10px;
+}
+
+
+thead th {
+    background-color: rgb(178, 216, 252);
+    color: #000;
+    font-weight: 400;
+}
+
+
+thead th:first-child {
+    background-color: rgb(74, 119, 212);
+    color: #fff;
+}
+
+tbody th {
+    background-color: rgb(178, 216, 252) I !important;
+    color: #000 !important; 
+    font-weight: 400;
+}
+
+
+tbody th.tb-header {
+    background-color: #B2D8FC;
+    color: #fff;
+    font-weight: 400;
+}
+
+tbody td {
+    background-color: #F1FCE8;
+    color: #000;
+}
+
+
+tbody td:not(.not-available) {
+    cursor: pointer;
+}
+
+td.selected {
+    background-color: #9ACD32;
+    color: #fff;
+    font-weight: 400;
+}
+
+td.highlight {
+    background-color: #9ACD32;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+#home main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#home main #displaySelected #result, 
+#home main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+
+#home main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#home main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#home main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+
+.cliffSite {
+    background-color: lightblue;
+    padding: 4px;
+    display: inline-block;
+    margin: 8px 8px 0 0;
+}
+
